@@ -1,0 +1,74 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: plataforma-ecommerce
+  description: Sistema ficticio de ecommerce usado para demonstrar relacoes no Backstage
+spec:
+  owner: user:default/roberto
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: time-commerce
+  description: Time responsavel pela plataforma de ecommerce
+spec:
+  type: team
+  profile:
+    displayName: Time Commerce
+  children: []
+  members:
+    - jonas
+    - rafael
+    - gustavo
+    - roberto
+    - adriana
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jonas
+spec:
+  profile:
+    displayName: Jonas
+  memberOf:
+    - time-commerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: rafael
+spec:
+  profile:
+    displayName: Rafael
+  memberOf:
+    - time-commerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: gustavo
+spec:
+  profile:
+    displayName: Gustavo
+  memberOf:
+    - time-commerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: roberto
+spec:
+  profile:
+    displayName: Roberto
+  memberOf:
+    - time-commerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: adriana
+spec:
+  profile:
+    displayName: Adriana
+  memberOf:
+    - time-commerce
